@@ -25,8 +25,8 @@ export function Hero() {
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
               />
-              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,7,0.88)_0%,rgba(7,7,7,0.58)_45%,rgba(7,7,7,0.28)_100%)]" />
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,186,140,0.18),transparent_36%),linear-gradient(180deg,transparent_0%,rgba(7,7,7,0.72)_100%)]" />
+              <div className="absolute inset-0" style={{ background: "var(--hero-overlay-primary)" }} />
+              <div className="absolute inset-0" style={{ background: "var(--hero-overlay-secondary)" }} />
               <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-5 pb-16 pt-28 sm:px-8 sm:pb-20 sm:pt-32 lg:px-12 lg:pb-20 lg:pt-24">
                 <div className="grid min-h-[calc(100svh-7rem)] w-full gap-8 lg:grid-cols-[minmax(0,0.95fr)_232px] lg:gap-10">
                   <div className="flex min-h-[28rem] max-w-[880px] flex-col justify-center lg:min-h-[31rem]">

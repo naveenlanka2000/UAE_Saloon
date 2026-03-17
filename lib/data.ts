@@ -1,12 +1,3 @@
-import {
-  Award,
-  CalendarClock,
-  Flower2,
-  Gem,
-  ShieldCheck,
-  Sparkles,
-} from "lucide-react";
-
 export const heroSlides = [
   {
     image:
@@ -103,40 +94,32 @@ export const serviceTracks = {
 
 export const differentiators = [
   {
-    icon: Award,
     title: "Expert stylists",
     description:
       "Senior artists with runway, bridal, and luxury salon experience guide every look.",
+    image:
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    icon: Gem,
     title: "Premium products",
     description:
       "We work with prestige formulas selected for performance, scalp comfort, and finish.",
+    image:
+      "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    icon: Flower2,
     title: "Personalized care",
     description:
       "Consultations are tailored around hair texture, skin tone, occasion, and maintenance.",
+    image:
+      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    icon: Sparkles,
-    title: "Luxury ambience",
-    description:
-      "Soft lighting, curated scent, and polished interiors create a calm, elevated mood.",
-  },
-  {
-    icon: ShieldCheck,
     title: "Hygiene standards",
     description:
       "Strict sanitation, premium linens, and disciplined station protocols protect every guest.",
-  },
-  {
-    icon: CalendarClock,
-    title: "Effortless booking",
-    description:
-      "Fast appointment requests, flexible timing, and attentive follow-up keep visits seamless.",
+    image:
+      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 

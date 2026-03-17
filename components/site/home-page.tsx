@@ -69,28 +69,38 @@ export function HomePage() {
             description="The salon experience is built around elevated outcomes and a level of care that premium UAE clients expect."
           />
         </Reveal>
-        <div className="frame-grid mt-14 grid gap-4 border border-[var(--color-border)] bg-[var(--color-grid)] md:grid-cols-2 xl:grid-cols-3">
-          {differentiators.map((item, index) => {
-            const Icon = item.icon;
-
-            return (
-              <Reveal key={item.title} delay={index * 0.05}>
-                <div className="frame-panel card-shell group bg-[var(--color-panel)] transition duration-500 hover:bg-[var(--color-panel-strong)]">
-                  <div className="card-body min-h-[16rem]">
-                    <div className="card-copy">
-                      <div className="inline-flex size-[52px] items-center justify-center border border-[var(--color-champagne)]/30 bg-[var(--color-sand)]/6 text-[var(--color-champagne)]">
-                        <Icon size={22} />
-                      </div>
-                      <h3 className="font-heading text-3xl">{item.title}</h3>
-                      <p className="max-w-md text-sm leading-7 text-[var(--color-muted)]">
+        <div
+          style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
+          className="mt-14 px-2"
+        >
+          <div className="grid gap-2 md:grid-cols-2">
+            {differentiators.map((item, index) => {
+              return (
+                <Reveal key={item.title} delay={index * 0.05}>
+                  <article className="group relative min-h-[320px] overflow-hidden border border-[var(--color-border)] sm:min-h-[360px]">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_18%,rgba(10,10,10,0.18)_45%,rgba(10,10,10,0.8)_100%)]" />
+                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
+                      <p className="text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase">
+                        Signature standard
+                      </p>
+                      <h3 className="mt-2 max-w-[14ch] font-heading text-3xl text-[var(--color-on-image)] sm:text-4xl">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 max-w-[32ch] text-sm leading-7 text-[var(--color-on-image-muted)]">
                         {item.description}
                       </p>
                     </div>
-                  </div>
-                </div>
-              </Reveal>
-            );
-          })}
+                  </article>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 

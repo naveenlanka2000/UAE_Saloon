@@ -80,12 +80,12 @@ function ServiceTrack({
           {items.map((item, index) => (
             <span
               key={`${item.title}-dot`}
-              className={`relative block h-[6px] overflow-hidden rounded-full bg-[var(--color-border)] transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+              className={`relative block h-[6px] overflow-hidden rounded-full bg-[var(--color-indicator-track)] transition-all duration-1000 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                 index === activeIndex ? "w-8" : "w-[6px]"
               }`}
             >
               <span
-                className={`absolute inset-y-0 left-0 rounded-full bg-[var(--color-ivory)] ${
+                className={`absolute inset-y-0 left-0 rounded-full bg-[var(--color-indicator-fill)] ${
                   index === activeIndex ? "animate-[servicesDotFill_3.5s_linear_forwards]" : "w-0"
                 }`}
               />
