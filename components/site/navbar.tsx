@@ -8,7 +8,6 @@ import {
   Gem,
   HandPlatter,
   Home,
-  Images,
   Menu,
   MessageSquareQuote,
   Moon,
@@ -19,13 +18,12 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { label: "Home", href: "#home", icon: Home },
-  { label: "About", href: "#about", icon: Gem },
-  { label: "Services", href: "#services", icon: HandPlatter },
-  { label: "Gallery", href: "#gallery", icon: Images },
-  { label: "Team", href: "#team", icon: Users },
-  { label: "Offers", href: "#offers", icon: Sparkles },
-  { label: "Contact", href: "#contact", icon: MessageSquareQuote },
+  { label: "Home", href: "/#home", icon: Home },
+  { label: "About", href: "/#about", icon: Gem },
+  { label: "Services", href: "/#services", icon: HandPlatter },
+  { label: "Offers", href: "/#offers", icon: Sparkles },
+  { label: "Team", href: "/#team", icon: Users },
+  { label: "Contact", href: "/#contact", icon: MessageSquareQuote },
 ];
 
 export function Navbar() {
@@ -65,11 +63,11 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
+      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
         <Link
-          href="#home"
+          href="/"
           className={`group flex flex-col justify-center leading-tight transition-colors ${
-            scrolled ? "text-[var(--color-ivory)]" : "text-[var(--color-on-image)]"
+            scrolled ? "text-[var(--color-ivory)]" : "text-[var(--hero-nav-text)]"
           }`}
         >
           <span className="font-heading text-3xl leading-[0.92] tracking-[0.16em] uppercase transition-transform duration-500 group-hover:translate-x-[2px]">
@@ -80,7 +78,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden items-center gap-0 lg:flex">
           {navItems.map(({ label, href, icon: Icon }) => (
             <motion.div
               key={href}
@@ -91,28 +89,38 @@ export function Navbar() {
             >
               <Link
                 href={href}
-                className={`group relative inline-flex items-center gap-2 px-3 py-3 text-[0.82rem] font-medium tracking-[0.14em] uppercase transition ${
+                className={`group relative inline-flex items-center gap-1.5 px-2 py-2 text-[0.69rem] font-medium tracking-[0.1em] uppercase transition ${
                   scrolled
                     ? "text-[var(--color-muted)] hover:text-[var(--color-ivory)]"
-                    : "text-[var(--color-on-image-muted)] hover:text-[var(--color-on-image)]"
+                    : "text-[var(--hero-nav-text-muted)] hover:text-[var(--hero-nav-text)]"
                 }`}
               >
                 <motion.span
                   variants={{
-                    rest: { width: 0, opacity: 0, x: -6 },
-                    hover: { width: 18, opacity: 1, x: 0 },
+                    rest: { width: 0, opacity: 0, x: -8, scale: 0.9 },
+                    hover: { width: 14, opacity: 1, x: 0, scale: 1 },
                   }}
-                  transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-                  className="inline-flex overflow-hidden text-[var(--color-champagne)]"
+                  transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+                  className="inline-flex items-center overflow-hidden text-[var(--color-champagne)]"
                 >
-                  <Icon size={16} strokeWidth={1.85} />
+                  <Icon size={13} strokeWidth={1.9} />
                 </motion.span>
-                {label}
                 <motion.span
-                  variants={{ hover: { scaleX: 1, opacity: 1 } }}
-                  initial={{ scaleX: 0.35, opacity: 0 }}
-                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute inset-x-3 bottom-[7px] h-px origin-left bg-[var(--color-champagne)]"
+                  variants={{
+                    rest: { x: 0 },
+                    hover: { x: 1.5 },
+                  }}
+                  transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  {label}
+                </motion.span>
+                <motion.span
+                  variants={{
+                    rest: { scaleX: 0.22, opacity: 0 },
+                    hover: { scaleX: 1, opacity: 1 },
+                  }}
+                  transition={{ duration: 0.36, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute inset-x-2.5 bottom-[7px] h-px origin-left bg-[var(--color-champagne)]"
                 />
               </Link>
             </motion.div>
@@ -122,12 +130,20 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <motion.div whileHover={{ y: -1.5 }} transition={{ duration: 0.25 }}>
             <Link
-              href="#booking"
-              className={`group inline-flex min-h-[3.25rem] items-center gap-3 rounded-full border px-6 text-[0.82rem] font-bold tracking-[0.02em] transition ${
+              href="/appointment"
+              className={`group inline-flex min-h-[2.8rem] items-center gap-2.5 rounded-full border px-5 text-[0.76rem] font-bold tracking-[0.02em] transition ${
                 scrolled
                   ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
-                  : "border-white/18 bg-black/12 text-[var(--color-on-image)] backdrop-blur-md"
+                  : "text-[var(--hero-nav-text)] backdrop-blur-md"
               }`}
+              style={
+                scrolled
+                  ? undefined
+                  : {
+                      borderColor: "var(--hero-nav-border)",
+                      background: "var(--hero-nav-surface)",
+                    }
+              }
             >
               Book Now
               <ArrowUpRight
@@ -143,11 +159,19 @@ export function Navbar() {
             whileHover={{ y: -1.5, rotate: theme === "light" ? -10 : 10 }}
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.25 }}
-            className={`inline-flex size-12 items-center justify-center border transition ${
+            className={`inline-flex size-10 items-center justify-center border transition ${
               scrolled
                 ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
-                : "border-white/18 bg-black/12 text-[var(--color-on-image)] backdrop-blur-md"
+                : "text-[var(--hero-nav-text)] backdrop-blur-md"
             }`}
+            style={
+              scrolled
+                ? undefined
+                : {
+                    borderColor: "var(--hero-nav-border)",
+                    background: "var(--hero-nav-surface)",
+                  }
+            }
           >
             <AnimatePresence mode="wait" initial={false}>
               <motion.span
@@ -171,8 +195,16 @@ export function Navbar() {
           className={`inline-flex size-11 items-center justify-center border transition lg:hidden ${
             scrolled
               ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)]"
-              : "border-white/18 bg-black/12 text-[var(--color-on-image)] backdrop-blur-md"
+              : "text-[var(--hero-nav-text)] backdrop-blur-md"
           }`}
+          style={
+            scrolled
+              ? undefined
+              : {
+                  borderColor: "var(--hero-nav-border)",
+                  background: "var(--hero-nav-surface)",
+                }
+          }
         >
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
@@ -222,7 +254,7 @@ export function Navbar() {
               <button type="button" onClick={toggleTheme} className="button-secondary mt-5 justify-center">
                 {theme === "light" ? "Dark Mode" : "Light Mode"}
               </button>
-              <Link href="#booking" onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
+              <Link href="/appointment" onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
                 Book Now
               </Link>
             </div>

@@ -98,52 +98,52 @@ export const differentiators = [
     description:
       "Senior artists with runway, bridal, and luxury salon experience guide every look.",
     image:
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Premium products",
     description:
       "We work with prestige formulas selected for performance, scalp comfort, and finish.",
     image:
-      "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Personalized care",
     description:
       "Consultations are tailored around hair texture, skin tone, occasion, and maintenance.",
     image:
-      "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Hygiene standards",
     description:
       "Strict sanitation, premium linens, and disciplined station protocols protect every guest.",
     image:
-      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=1200&q=80&sat=-60&exp=10",
   },
 ];
 
 export const team = [
   {
-    name: "Layla Haddad",
-    role: "Creative Director",
-    specialty: "Precision cuts, editorial styling, signature image direction",
+    name: "Omar Kareem",
+    role: "Style Director",
+    specialty: "Precision cuts, finishing detail, and elevated salon direction",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Mariam Noor",
-    role: "Color Master",
-    specialty: "Lived-in blondes, rich brunettes, glossing, correction",
+    name: "Daniel Noor",
+    role: "Color Expert",
+    specialty: "Modern color balance, glossing, and polished luxury finishes",
     image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80",
   },
   {
-    name: "Sara Elia",
-    role: "Bridal Beauty Lead",
-    specialty: "Bridal makeup, skin prep, occasion hair, luxury finishing",
+    name: "Yousef Rahim",
+    role: "Grooming Artist",
+    specialty: "Sharp grooming, beard detailing, and clean occasion styling",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1504257432389-52343af06ae3?auto=format&fit=crop&w=900&q=80",
   },
 ];
 
@@ -157,18 +157,30 @@ export const gallerySlides = [
 export const offers = [
   {
     title: "Bridal House Signature",
-    copy: "Hair, makeup, pre-event facial, and private consultation for the wedding week.",
+    copy: "Hair, makeup, skin prep, and private planning for the wedding week.",
     meta: "From AED 2,950",
+    tag: "Most requested",
+    image:
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+    detail: "Private consultation included",
   },
   {
     title: "Seasonal Renewal",
-    copy: "Gloss, treatment, tailored blowout, and nail ritual designed for a full reset.",
-    meta: "Limited spring edition",
+    copy: "Gloss, treatment, tailored blowout, and nail care for a full reset.",
+    meta: "Limited edition",
+    tag: "Seasonal edit",
+    image:
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
+    detail: "Ideal for soft maintenance",
   },
   {
     title: "Prive Membership",
-    copy: "Priority booking, preferred pricing, and curated monthly beauty maintenance.",
+    copy: "Priority booking, preferred pricing, and curated monthly maintenance.",
     meta: "Invitation available",
+    tag: "Members only",
+    image:
+      "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+    detail: "Reserved access and perks",
   },
 ];
 

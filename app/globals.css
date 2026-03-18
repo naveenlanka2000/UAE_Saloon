@@ -21,39 +21,55 @@
     Helvetica,
     Arial,
     sans-serif;
-  --color-obsidian: #f5f5f7;
+  --font-script:
+    "Zapfino",
+    "Snell Roundhand",
+    "Lucida Handwriting",
+    "Apple Chancery",
+    "Segoe Script",
+    "Brush Script MT",
+    cursive;
+  --color-obsidian: #ffffff;
   --color-charcoal: #ffffff;
-  --color-panel: rgba(255, 255, 255, 0.82);
-  --color-panel-strong: rgba(255, 255, 255, 0.94);
+  --color-panel: rgba(255, 255, 255, 0.78);
+  --color-panel-strong: rgba(255, 255, 255, 0.92);
   --color-sand: #c8b28d;
   --color-champagne: #b28d58;
   --color-bronze: #8f7352;
   --color-ivory: #101214;
-  --color-muted: rgba(16, 18, 20, 0.64);
-  --color-border: rgba(16, 18, 20, 0.08);
-  --color-grid: rgba(16, 18, 20, 0.06);
-  --color-glass: rgba(255, 255, 255, 0.72);
-  --color-glass-strong: rgba(255, 255, 255, 0.9);
-  --color-input: rgba(255, 255, 255, 0.78);
-  --color-footer: #f0f0f2;
+  --color-muted: rgba(16, 18, 20, 0.62);
+  --color-border: rgba(16, 18, 20, 0.1);
+  --color-grid: rgba(16, 18, 20, 0.04);
+  --color-glass: rgba(255, 255, 255, 0.78);
+  --color-glass-strong: rgba(255, 255, 255, 0.94);
+  --color-input: rgba(255, 255, 255, 0.88);
+  --color-footer: #f5f5f7;
   --color-on-image: #f7f4ed;
   --color-on-image-muted: rgba(247, 244, 237, 0.78);
   --color-indicator-track: rgba(16, 18, 20, 0.18);
   --color-indicator-fill: #101214;
-  --hero-stat-surface: rgba(255, 255, 255, 0.16);
-  --hero-stat-card: rgba(24, 24, 24, 0.58);
-  --hero-frame: rgba(255, 255, 255, 0.16);
-  --hero-overlay-primary: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0) 100%);
-  --hero-overlay-secondary: radial-gradient(circle at top right, rgba(178, 141, 88, 0.1), transparent 36%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.08) 100%);
+  --hero-stat-surface: rgba(255, 255, 255, 0.28);
+  --hero-stat-card: rgba(32, 30, 28, 0.46);
+  --hero-frame: rgba(255, 255, 255, 0.24);
+  --hero-overlay-primary: linear-gradient(90deg, rgba(18, 16, 14, 0.28) 0%, rgba(18, 16, 14, 0.14) 40%, rgba(18, 16, 14, 0.04) 100%);
+  --hero-overlay-secondary: radial-gradient(circle at top right, rgba(178, 141, 88, 0.16), transparent 34%), linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(18, 16, 14, 0.1) 100%);
+  --hero-nav-border: rgba(16, 18, 20, 0.12);
+  --hero-nav-surface: rgba(255, 255, 255, 0.78);
+  --hero-nav-text: #101214;
+  --hero-nav-text-muted: rgba(16, 18, 20, 0.72);
+  --hero-section-background: linear-gradient(180deg, #fdfcf9 0%, #f6f1ea 100%);
+  --hero-wordmark: #b894c3;
+  --about-section-background: linear-gradient(180deg, #ceb6cb 0%, #c9b0c7 100%);
+  --image-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.08) 45%, rgba(10, 10, 10, 0.6) 100%);
+  --image-card-overlay-soft: linear-gradient(180deg, transparent 20%, rgba(10, 10, 10, 0.42) 100%);
+  --services-card-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(10, 10, 10, 0.06) 46%, rgba(10, 10, 10, 0.44) 100%);
   --button-primary-start: #111111;
   --button-primary-end: #242424;
   --button-primary-text: #ffffff;
   --button-primary-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
   --button-primary-hover-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
   --page-background:
-    radial-gradient(circle at top right, rgba(178, 141, 88, 0.1), transparent 26%),
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 35%),
-    linear-gradient(180deg, #fbfbfd 0%, #f2f2f5 100%);
+    linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
 }
 
 [data-theme="dark"] {
@@ -81,6 +97,16 @@
   --hero-frame: rgba(255, 255, 255, 0.1);
   --hero-overlay-primary: linear-gradient(90deg, rgba(7, 7, 7, 0.88) 0%, rgba(7, 7, 7, 0.58) 45%, rgba(7, 7, 7, 0.28) 100%);
   --hero-overlay-secondary: radial-gradient(circle at top right, rgba(212, 186, 140, 0.18), transparent 36%), linear-gradient(180deg, transparent 0%, rgba(7, 7, 7, 0.72) 100%);
+  --hero-nav-border: rgba(255, 255, 255, 0.18);
+  --hero-nav-surface: rgba(0, 0, 0, 0.12);
+  --hero-nav-text: #f4efe7;
+  --hero-nav-text-muted: rgba(244, 239, 231, 0.76);
+  --hero-section-background: linear-gradient(180deg, #0b0b0b 0%, #090909 100%);
+  --hero-wordmark: #d3b0de;
+  --about-section-background: linear-gradient(180deg, #2a2229 0%, #241c22 100%);
+  --image-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.18) 45%, rgba(10, 10, 10, 0.8) 100%);
+  --image-card-overlay-soft: linear-gradient(180deg, transparent 20%, rgba(10, 10, 10, 0.52) 100%);
+  --services-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.18) 48%, rgba(10, 10, 10, 0.82) 100%);
   --button-primary-start: #f6efe3;
   --button-primary-end: #e8d6b3;
   --button-primary-text: #111111;
@@ -106,6 +132,7 @@ body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -129,12 +156,16 @@ button {
   font-family: var(--font-heading);
 }
 
+.font-script {
+  font-family: var(--font-script);
+}
+
 .section-shell {
   margin-inline: auto;
   width: 100%;
   max-width: 1440px;
   padding-inline: 1.25rem;
-  padding-block: 4.5rem;
+  padding-block: 3rem;
 }
 
 .section-eyebrow {
@@ -209,15 +240,28 @@ button {
 
 .button-secondary {
   border: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-charcoal) 92%, transparent);
+  background: color-mix(in srgb, var(--color-charcoal) 82%, transparent);
   color: var(--color-ivory);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .button-secondary:hover {
   transform: translateY(-1px);
   border-color: color-mix(in srgb, var(--color-ivory) 20%, var(--color-border));
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .button-secondary {
+  border-color: rgba(16, 18, 20, 0.14);
+  background: rgba(255, 255, 255, 0.88);
+  color: #101214;
+  box-shadow: 0 10px 24px rgba(16, 18, 20, 0.06);
+}
+
+[data-theme="light"] .button-secondary:hover {
+  border-color: rgba(16, 18, 20, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 14px 28px rgba(16, 18, 20, 0.08);
 }
 
 .button-hero-primary {
@@ -324,6 +368,14 @@ button {
   z-index: 1;
 }
 
+[data-theme="light"] .frame-panel {
+  box-shadow: 0 18px 42px rgba(28, 22, 14, 0.04);
+}
+
+[data-theme="dark"] .frame-panel {
+  box-shadow: 0 20px 46px rgba(0, 0, 0, 0.22);
+}
+
 @keyframes servicesDotFill {
   from {
     width: 0%;
@@ -344,13 +396,13 @@ button {
 @media (min-width: 640px) {
   .section-shell {
     padding-inline: 2rem;
-    padding-block: 5.25rem;
+    padding-block: 3.5rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-shell {
     padding-inline: 3rem;
-    padding-block: 6.25rem;
+    padding-block: 4rem;
   }
 }
