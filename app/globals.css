@@ -60,6 +60,7 @@
   --hero-section-background: linear-gradient(180deg, #fdfcf9 0%, #f6f1ea 100%);
   --hero-wordmark: #b894c3;
   --about-section-background: linear-gradient(180deg, #ceb6cb 0%, #c9b0c7 100%);
+  --about-image-fade: linear-gradient(180deg, rgba(201, 176, 199, 0) 0%, rgba(201, 176, 199, 0) 68%, rgba(201, 176, 199, 0.18) 84%, rgba(201, 176, 199, 0.72) 100%);
   --image-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.08) 45%, rgba(10, 10, 10, 0.6) 100%);
   --image-card-overlay-soft: linear-gradient(180deg, transparent 20%, rgba(10, 10, 10, 0.42) 100%);
   --services-card-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(10, 10, 10, 0.06) 46%, rgba(10, 10, 10, 0.44) 100%);
@@ -104,6 +105,7 @@
   --hero-section-background: linear-gradient(180deg, #0b0b0b 0%, #090909 100%);
   --hero-wordmark: #d3b0de;
   --about-section-background: linear-gradient(180deg, #2a2229 0%, #241c22 100%);
+  --about-image-fade: linear-gradient(180deg, rgba(36, 28, 34, 0) 0%, rgba(36, 28, 34, 0) 68%, rgba(36, 28, 34, 0.18) 84%, rgba(36, 28, 34, 0.82) 100%);
   --image-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.18) 45%, rgba(10, 10, 10, 0.8) 100%);
   --image-card-overlay-soft: linear-gradient(180deg, transparent 20%, rgba(10, 10, 10, 0.52) 100%);
   --services-card-overlay: linear-gradient(180deg, transparent 18%, rgba(10, 10, 10, 0.18) 48%, rgba(10, 10, 10, 0.82) 100%);

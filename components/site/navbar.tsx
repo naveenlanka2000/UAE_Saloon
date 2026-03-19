@@ -66,15 +66,27 @@ export function Navbar() {
       <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
         <Link
           href="/"
-          className={`group flex flex-col justify-center leading-tight transition-colors ${
+          className={`group flex items-center leading-tight transition-colors ${
             scrolled ? "text-[var(--color-ivory)]" : "text-[var(--hero-nav-text)]"
           }`}
         >
-          <span className="font-heading text-3xl leading-[0.92] tracking-[0.16em] uppercase transition-transform duration-500 group-hover:translate-x-[2px]">
-            Maison
-          </span>
-          <span className="mt-1 text-[10px] leading-none tracking-[0.48em] text-[var(--color-champagne)] uppercase">
-            de Sable
+          <span
+            className="relative inline-flex size-9 shrink-0 items-center justify-center rounded-full border transition-transform duration-500 group-hover:scale-[1.04]"
+            style={{
+              borderColor: scrolled
+                ? "color-mix(in srgb, var(--color-ivory) 18%, transparent)"
+                : "color-mix(in srgb, var(--hero-nav-text) 18%, transparent)",
+              background: scrolled
+                ? "color-mix(in srgb, var(--color-ivory) 7%, transparent)"
+                : "color-mix(in srgb, var(--hero-nav-text) 7%, transparent)",
+            }}
+          >
+            <span
+              className="font-heading text-[0.95rem] leading-none tracking-[-0.08em]"
+              style={{ color: scrolled ? "var(--color-ivory)" : "var(--hero-nav-text)" }}
+            >
+              MS
+            </span>
           </span>
         </Link>
 
@@ -89,7 +101,7 @@ export function Navbar() {
             >
               <Link
                 href={href}
-                className={`group relative inline-flex items-center gap-1.5 px-2 py-2 text-[0.69rem] font-medium tracking-[0.1em] uppercase transition ${
+                className={`group relative inline-flex items-center gap-1.5 px-1.5 py-2 text-[0.62rem] font-medium tracking-[0.1em] uppercase transition ${
                   scrolled
                     ? "text-[var(--color-muted)] hover:text-[var(--color-ivory)]"
                     : "text-[var(--hero-nav-text-muted)] hover:text-[var(--hero-nav-text)]"
@@ -131,7 +143,7 @@ export function Navbar() {
           <motion.div whileHover={{ y: -1.5 }} transition={{ duration: 0.25 }}>
             <Link
               href="/appointment"
-              className={`group inline-flex min-h-[2.8rem] items-center gap-2.5 rounded-full border px-5 text-[0.76rem] font-bold tracking-[0.02em] transition ${
+              className={`group inline-flex min-h-[2.4rem] items-center gap-2 rounded-full border px-4 text-[0.69rem] font-bold tracking-[0.02em] transition ${
                 scrolled
                   ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
                   : "text-[var(--hero-nav-text)] backdrop-blur-md"
@@ -159,7 +171,7 @@ export function Navbar() {
             whileHover={{ y: -1.5, rotate: theme === "light" ? -10 : 10 }}
             whileTap={{ scale: 0.96 }}
             transition={{ duration: 0.25 }}
-            className={`inline-flex size-10 items-center justify-center border transition ${
+            className={`inline-flex size-8 items-center justify-center rounded-full border transition ${
               scrolled
                 ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
                 : "text-[var(--hero-nav-text)] backdrop-blur-md"

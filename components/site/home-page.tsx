@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import {
   ArrowRight,
   Instagram,
@@ -25,6 +26,25 @@ import { Navbar } from "./navbar";
 import { ServicesShowcase } from "./services-showcase";
 
 export function HomePage() {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
+  useEffect(() => {
+    const syncTheme = () => {
+      const currentTheme = document.documentElement.dataset.theme;
+      setTheme(currentTheme === "dark" ? "dark" : "light");
+    };
+
+    syncTheme();
+
+    const observer = new MutationObserver(syncTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="bg-[var(--color-obsidian)] text-[var(--color-ivory)]">
       <Navbar />
@@ -38,14 +58,21 @@ export function HomePage() {
         <Reveal>
           <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
             <div className="relative z-10 mx-auto -mt-20 w-full max-w-[400px] sm:-mt-24 lg:-mt-30">
-              <div className="relative min-h-[420px] overflow-hidden">
+              <div
+                className="relative min-h-[420px] overflow-hidden"
+                style={{
+                  WebkitMaskImage:
+                    "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
+                  maskImage:
+                    "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
+                }}
+              >
                 <Image
-                  src="/about-main.png"
+                  src={theme === "dark" ? "/about-dark.png" : "/about-main.png"}
                   alt="Salon treatment moment"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,rgba(201,176,199,0)_0%,rgba(201,176,199,0.38)_58%,rgba(201,176,199,0.92)_100%)] blur-[4px]" />
               </div>
             </div>
             <div className="max-w-[26rem] self-end pb-10 lg:justify-self-end lg:pb-16">
