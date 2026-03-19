@@ -1,4 +1,4 @@
-name: Deploy To GitHub Pages
+name: UAE_Saloon Pages Deploy
 
 on:
   push:
