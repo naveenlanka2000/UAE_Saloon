@@ -47,6 +47,20 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Normalize export folder
+        shell: bash
+        run: |
+          if [ -d "out" ]; then
+            echo "Found ./out"
+          elif [ -d ".next-app/export" ]; then
+            echo "Using .next-app/export"
+            cp -R .next-app/export ./out
+          else
+            echo "No static export folder found"
+            find . -maxdepth 3 -type d | sort
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
