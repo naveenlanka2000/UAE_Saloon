@@ -20,15 +20,15 @@ import {
   team,
   testimonials,
 } from "@/lib/data";
+import { getPublicBasePath } from "@/lib/public-base-path";
 
 import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { ServicesShowcase } from "./services-showcase";
 
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export function HomePage() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [publicBasePath, setPublicBasePath] = useState("");
 
   useEffect(() => {
     const syncTheme = () => {
@@ -36,6 +36,7 @@ export function HomePage() {
       setTheme(currentTheme === "dark" ? "dark" : "light");
     };
 
+    setPublicBasePath(getPublicBasePath());
     syncTheme();
 
     const observer = new MutationObserver(syncTheme);

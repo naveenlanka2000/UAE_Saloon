@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+import { getPublicBasePath } from "@/lib/public-base-path";
 
 export function Hero() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [publicBasePath, setPublicBasePath] = useState("");
 
   useEffect(() => {
     const syncTheme = () => {
@@ -15,6 +16,7 @@ export function Hero() {
       setTheme(currentTheme === "dark" ? "dark" : "light");
     };
 
+    setPublicBasePath(getPublicBasePath());
     syncTheme();
 
     const observer = new MutationObserver(syncTheme);
