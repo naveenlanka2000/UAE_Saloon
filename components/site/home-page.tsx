@@ -69,15 +69,14 @@ export function HomePage() {
                     "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
                 }}
               >
-                <Image
+                <img
                   src={
                     theme === "dark"
                       ? `${publicBasePath}/about-dark.png`
                       : `${publicBasePath}/about-main.png`
                   }
                   alt="Salon treatment moment"
-                  fill
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>
             </div>

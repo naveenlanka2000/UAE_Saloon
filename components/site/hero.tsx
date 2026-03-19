@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -109,17 +108,14 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
             className="relative min-h-[52vh] overflow-hidden sm:min-h-[60vh] lg:min-h-screen"
           >
-            <Image
+            <img
               src={
                 theme === "dark"
                   ? `${publicBasePath}/hero-dark.png`
                   : `${publicBasePath}/hero-main.png`
               }
               alt="Luxury salon hero portrait"
-              fill
-              quality={100}
-              className="object-cover object-center"
-              priority
+              className="absolute inset-0 h-full w-full object-cover object-center"
             />
             <div
               className="absolute inset-0"
