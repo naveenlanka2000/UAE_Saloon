@@ -52,9 +52,10 @@ jobs:
         run: |
           if [ -d "out" ]; then
             echo "Found ./out"
-          elif [ -d ".next-app/export" ]; then
-            echo "Using .next-app/export"
-            cp -R .next-app/export ./out
+          elif [ -d ".next-app/_next" ]; then
+            echo "Using .next-app"
+            mkdir -p out
+            cp -R .next-app/* ./out
           else
             echo "No static export folder found"
             find . -maxdepth 3 -type d | sort
