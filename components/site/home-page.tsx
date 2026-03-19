@@ -25,6 +25,8 @@ import { Hero } from "./hero";
 import { Navbar } from "./navbar";
 import { ServicesShowcase } from "./services-showcase";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function HomePage() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -68,7 +70,11 @@ export function HomePage() {
                 }}
               >
                 <Image
-                  src={theme === "dark" ? "/about-dark.png" : "/about-main.png"}
+                  src={
+                    theme === "dark"
+                      ? `${publicBasePath}/about-dark.png`
+                      : `${publicBasePath}/about-main.png`
+                  }
                   alt="Salon treatment moment"
                   fill
                   className="object-cover"

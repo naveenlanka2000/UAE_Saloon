@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function Hero() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
@@ -108,7 +110,11 @@ export function Hero() {
             className="relative min-h-[52vh] overflow-hidden sm:min-h-[60vh] lg:min-h-screen"
           >
             <Image
-              src={theme === "dark" ? "/hero-dark.png" : "/hero-main.png"}
+              src={
+                theme === "dark"
+                  ? `${publicBasePath}/hero-dark.png`
+                  : `${publicBasePath}/hero-main.png`
+              }
               alt="Luxury salon hero portrait"
               fill
               quality={100}
