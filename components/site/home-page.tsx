@@ -77,6 +77,10 @@ export function HomePage() {
                       : `${publicBasePath}/about-main.png`
                   }
                   alt="Salon treatment moment"
+                  loading="lazy"
+                  fetchPriority="low"
+                  decoding="async"
+                  draggable={false}
                   className="absolute inset-0 h-full w-full object-cover"
                 />
               </div>

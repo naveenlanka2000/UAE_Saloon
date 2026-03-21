@@ -117,6 +117,10 @@ export function Hero() {
                   : `${publicBasePath}/hero-main.png`
               }
               alt="Luxury salon hero portrait"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              draggable={false}
               className="absolute inset-0 h-full w-full object-cover object-center"
             />
             <div
