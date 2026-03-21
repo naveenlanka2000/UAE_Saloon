@@ -16,20 +16,22 @@ import {
   Users,
   X,
 } from "lucide-react";
+import { getPublicBasePath } from "@/lib/public-base-path";
 
 const navItems = [
-  { label: "Home", href: "/#home", icon: Home },
-  { label: "About", href: "/#about", icon: Gem },
-  { label: "Services", href: "/#services", icon: HandPlatter },
-  { label: "Offers", href: "/#offers", icon: Sparkles },
-  { label: "Team", href: "/#team", icon: Users },
-  { label: "Contact", href: "/#contact", icon: MessageSquareQuote },
+  { label: "Home", hash: "#home", icon: Home },
+  { label: "About", hash: "#about", icon: Gem },
+  { label: "Services", hash: "#services", icon: HandPlatter },
+  { label: "Offers", hash: "#offers", icon: Sparkles },
+  { label: "Team", hash: "#team", icon: Users },
+  { label: "Contact", hash: "#contact", icon: MessageSquareQuote },
 ];
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [publicBasePath, setPublicBasePath] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -43,6 +45,7 @@ export function Navbar() {
     const nextTheme = savedTheme === "dark" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
     setTheme(nextTheme);
+    setPublicBasePath(getPublicBasePath());
   }, []);
 
   const toggleTheme = () => {
@@ -91,9 +94,11 @@ export function Navbar() {
         </Link>
 
         <nav className="hidden items-center gap-0 lg:flex">
-          {navItems.map(({ label, href, icon: Icon }) => (
+          {navItems.map(({ label, hash, icon: Icon }) => {
+            const href = `${publicBasePath}/${hash}`;
+            return (
             <motion.div
-              key={href}
+              key={hash}
               initial="rest"
               whileHover="hover"
               animate="rest"
@@ -136,13 +141,14 @@ export function Navbar() {
                 />
               </Link>
             </motion.div>
-          ))}
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
           <motion.div whileHover={{ y: -1.5 }} transition={{ duration: 0.25 }}>
             <Link
-              href="/appointment"
+              href={`${publicBasePath}/appointment`}
               className={`group inline-flex min-h-[2.4rem] items-center gap-2 rounded-full border px-4 text-[0.69rem] font-bold tracking-[0.02em] transition ${
                 scrolled
                   ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
@@ -242,9 +248,11 @@ export function Navbar() {
             className="overflow-hidden border-t border-[var(--color-border)] bg-[var(--color-glass-strong)] shadow-[0_18px_48px_rgba(0,0,0,0.08)] lg:hidden"
           >
             <div className="mx-auto flex max-w-[1440px] flex-col px-5 py-6 sm:px-8">
-              {navItems.map(({ label, href, icon: Icon }, index) => (
+              {navItems.map(({ label, hash, icon: Icon }, index) => {
+                const href = `${publicBasePath}/${hash}`;
+                return (
                 <motion.div
-                  key={href}
+                  key={hash}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -262,11 +270,12 @@ export function Navbar() {
                     <ArrowUpRight size={14} className="text-[var(--color-champagne)]" />
                   </Link>
                 </motion.div>
-              ))}
+                );
+              })}
               <button type="button" onClick={toggleTheme} className="button-secondary mt-5 justify-center">
                 {theme === "light" ? "Dark Mode" : "Light Mode"}
               </button>
-              <Link href="/appointment" onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
+              <Link href={`${publicBasePath}/appointment`} onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
                 Book Now
               </Link>
             </div>

@@ -35,9 +35,9 @@ export function Hero() {
       style={{ background: "var(--hero-section-background)" }}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-0 pt-24 sm:pt-28 lg:pt-24">
-        <div className="grid min-h-screen w-full gap-0 lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch">
-          <div className="relative z-10 max-w-[28rem] lg:pl-8">
+      <div className="relative mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-0 pt-20 sm:pt-24 lg:pt-24">
+        <div className="grid min-h-screen w-full gap-8 px-5 pb-8 sm:px-8 sm:pb-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0">
+          <div className="relative z-10 max-w-[28rem] self-end pb-2 lg:pl-8 lg:pb-20">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.08 }}
-              className="mt-7 text-[clamp(3.7rem,7.2vw,6.8rem)] leading-[0.9]"
+              className="mt-5 text-[clamp(2.9rem,12vw,6.8rem)] leading-[0.92]"
               style={{ color: "var(--hero-wordmark)" }}
             >
               <motion.span
@@ -85,7 +85,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="mt-6 max-w-[24rem] text-sm leading-7 text-[var(--color-muted)] sm:text-base"
+              className="mt-5 max-w-[22rem] text-sm leading-6 text-[var(--color-muted)] sm:text-base sm:leading-7"
             >
               Refined appointments for clients who want modern beauty with calm service, clean technique, and a premium finish.
             </motion.p>
@@ -93,7 +93,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-7 flex flex-col gap-3 sm:flex-row"
+              className="mt-6 flex flex-col gap-3 sm:flex-row"
             >
               <Link href="/appointment" className="button-primary">
                 Book Now
@@ -108,7 +108,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 26 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="relative min-h-[52vh] overflow-hidden sm:min-h-[60vh] lg:min-h-screen"
+            className="relative min-h-[42vh] overflow-hidden sm:min-h-[52vh] lg:min-h-screen"
           >
             <img
               src={

@@ -55,14 +55,14 @@ export function HomePage() {
 
       <section
         id="about"
-        className="section-shell relative overflow-visible pt-12 pb-0 sm:pt-14 sm:pb-0 lg:pt-16 lg:pb-0"
+        className="section-shell relative overflow-visible pt-8 pb-0 sm:pt-12 sm:pb-0 lg:pt-16 lg:pb-0"
         style={{ background: "var(--about-section-background)" }}
       >
         <Reveal>
-          <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-            <div className="relative z-10 mx-auto -mt-20 w-full max-w-[400px] sm:-mt-24 lg:-mt-30">
+          <div className="grid gap-4 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div className="relative z-10 mx-auto -mt-10 w-full max-w-[320px] sm:-mt-16 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
               <div
-                className="relative min-h-[420px] overflow-hidden"
+                className="relative min-h-[300px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
@@ -81,11 +81,11 @@ export function HomePage() {
                 />
               </div>
             </div>
-            <div className="max-w-[26rem] self-end pb-10 lg:justify-self-end lg:pb-16">
-              <p className="max-w-[20ch] font-heading text-[clamp(1.8rem,3vw,2.6rem)] leading-[1.02] tracking-[-0.03em] text-[var(--color-ivory)]/88">
+            <div className="max-w-[22rem] self-end pb-8 lg:max-w-[26rem] lg:justify-self-end lg:pb-16">
+              <p className="max-w-[20ch] font-heading text-[clamp(1.55rem,6vw,2.6rem)] leading-[1.04] tracking-[-0.03em] text-[var(--color-ivory)]/88">
                 Quiet luxury. Clean technique.
               </p>
-              <p className="mt-4 max-w-[26ch] text-sm leading-7 text-[var(--color-ivory)]/68 sm:text-base">
+              <p className="mt-3 max-w-[26ch] text-sm leading-6 text-[var(--color-ivory)]/68 sm:text-base sm:leading-7">
                 Tailored beauty rituals designed for polished results and a calm premium experience.
               </p>
             </div>
