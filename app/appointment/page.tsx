@@ -59,6 +59,7 @@ export default function AppointmentPage() {
                   src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
                   alt="Luxury salon portrait"
                   fill
+                  sizes="(max-width: 1023px) 320px, 26vw"
                   className="object-cover"
                 />
               </div>
@@ -69,6 +70,7 @@ export default function AppointmentPage() {
                 src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80"
                 alt="Beauty editorial visual"
                 fill
+                sizes="(max-width: 1023px) 100vw, 36vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.14)_0%,rgba(0,0,0,0.56)_100%)]" />
@@ -87,6 +89,7 @@ export default function AppointmentPage() {
                   src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80"
                   alt="Hair wash and care"
                   fill
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 70vw, 32vw"
                   className="object-cover"
                 />
               </div>

@@ -59,10 +59,10 @@ export function HomePage() {
         style={{ background: "var(--about-section-background)" }}
       >
         <Reveal>
-          <div className="grid gap-4 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-            <div className="relative z-10 mx-auto -mt-10 w-full max-w-[320px] sm:-mt-16 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
+          <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div className="relative z-10 mx-auto -mt-6 w-full max-w-[280px] sm:-mt-16 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
               <div
-                className="relative min-h-[300px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
+                className="relative min-h-[250px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
@@ -81,15 +81,16 @@ export function HomePage() {
                   fetchPriority="high"
                   decoding="async"
                   draggable={false}
-                  className="absolute inset-0 h-full w-full object-cover"
+                  className="absolute inset-0 h-full w-full object-cover [filter:drop-shadow(0_18px_28px_rgba(17,17,17,0.14))]"
                 />
               </div>
             </div>
-            <div className="max-w-[22rem] self-end pb-8 lg:max-w-[26rem] lg:justify-self-end lg:pb-16">
-              <p className="max-w-[20ch] font-heading text-[clamp(1.55rem,6vw,2.6rem)] leading-[1.04] tracking-[-0.03em] text-[var(--color-ivory)]/88">
+            <div className="max-w-[20rem] self-center pb-6 text-center lg:max-w-[28rem] lg:justify-self-end lg:pb-10 lg:text-left">
+              <span className="section-eyebrow">About the salon</span>
+              <p className="mt-4 max-w-[14ch] font-heading text-[clamp(1.55rem,7vw,3.3rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-ivory)]/92 lg:mt-5">
                 Quiet luxury. Clean technique.
               </p>
-              <p className="mt-3 max-w-[26ch] text-sm leading-6 text-[var(--color-ivory)]/68 sm:text-base sm:leading-7">
+              <p className="mt-4 max-w-[24ch] text-[0.92rem] leading-6 text-[var(--color-ivory)]/72 sm:text-lg sm:leading-8 lg:mt-5">
                 Tailored beauty rituals designed for polished results and a calm premium experience.
               </p>
             </div>
@@ -132,6 +133,7 @@ export function HomePage() {
                       alt={item.title}
                       fill
                       loading="eager"
+                      sizes="(max-width: 767px) 100vw, 50vw"
                       className="object-cover transition duration-700 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
@@ -171,26 +173,42 @@ export function HomePage() {
           {team.map((member, index) => (
             <Reveal key={member.name} delay={index * 0.08}>
               <article className="group bg-transparent text-center">
-                <div className="relative overflow-hidden border border-[rgba(16,18,20,0.06)] bg-[#fbfaf7]">
+                <div
+                  className="relative overflow-hidden border"
+                  style={{
+                    borderColor: "var(--color-border)",
+                    background:
+                      theme === "dark"
+                        ? "linear-gradient(180deg, #171717 0%, #111111 100%)"
+                        : "#fbfaf7",
+                  }}
+                >
                   <div className="relative h-[320px] sm:h-[360px]">
                     <Image
                       src={member.image}
                       alt={member.name}
                       fill
                       loading="eager"
-                      className="object-contain object-bottom p-2 transition duration-700 group-hover:scale-[1.02]"
+                      sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                      className="object-contain object-bottom p-2"
                     />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,9,9,0)_12%,rgba(9,9,9,0.22)_54%,rgba(9,9,9,0.82)_100%)] opacity-0 transition duration-500 group-hover:opacity-100" />
+                    <div className="absolute inset-x-0 bottom-0 translate-y-4 px-5 pb-5 text-left opacity-0 transition duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:px-6 sm:pb-6">
+                      <p className="text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase">
+                        {member.role}
+                      </p>
+                      <h3 className="mt-2 font-heading text-3xl leading-none text-[var(--color-on-image)]">
+                        {member.name}
+                      </h3>
+                      <p className="mt-3 max-w-[22ch] text-sm leading-6 text-[var(--color-on-image-muted)]">
+                        {member.specialty}
+                      </p>
+                    </div>
                   </div>
                 </div>
                 <div className="px-3 pb-2 pt-4">
                   <p className="text-[11px] tracking-[0.26em] text-[var(--color-champagne)] uppercase">
                     {member.role}
-                  </p>
-                  <h3 className="mt-2 font-heading text-[1.55rem] leading-none text-[var(--color-ivory)]">
-                    {member.name}
-                  </h3>
-                  <p className="mx-auto mt-3 max-w-[24ch] text-sm leading-6 text-[var(--color-muted)]">
-                    {member.specialty}
                   </p>
                 </div>
               </article>
@@ -222,6 +240,7 @@ export function HomePage() {
                   alt={offer.title}
                   fill
                   loading="eager"
+                  sizes="(max-width: 1279px) 100vw, 40vw"
                   className="object-cover transition duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,9,9,0.08)_0%,rgba(9,9,9,0.2)_30%,rgba(9,9,9,0.86)_100%)]" />

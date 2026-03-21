@@ -63,7 +63,14 @@ function ServiceTrack({
           >
             <article className="relative overflow-hidden border border-white/10">
               <div className={compact ? "relative h-[240px] sm:h-[260px] lg:h-[280px]" : "relative h-[360px] sm:h-[420px] lg:h-[460px]"}>
-                <Image src={item.image} alt={item.title} fill loading="eager" className="object-cover" />
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  loading="eager"
+                  sizes={compact ? "(max-width: 639px) 280px, (max-width: 1023px) 340px, 380px" : "(max-width: 639px) 360px, (max-width: 1023px) 480px, 560px"}
+                  className="object-cover"
+                />
                 <div className="absolute inset-0" style={{ background: "var(--services-card-overlay)" }} />
                 <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
                   <p className="text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase">

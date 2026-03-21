@@ -25,6 +25,7 @@ export function GalleryCarousel({ slides }: GalleryCarouselProps) {
                 src={slide}
                 alt={`Maison de Sable lookbook ${index + 1}`}
                 fill
+                sizes="100vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_35%,rgba(7,7,7,0.9)_100%)]" />

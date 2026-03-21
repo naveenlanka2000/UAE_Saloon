@@ -112,14 +112,14 @@ export const differentiators = [
     description:
       "Consultations are tailored around hair texture, skin tone, occasion, and maintenance.",
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=70",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=70",
   },
   {
     title: "Hygiene standards",
     description:
       "Strict sanitation, premium linens, and disciplined station protocols protect every guest.",
     image:
-      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=70&sat=-60&exp=10",
+      "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=70&sat=-60",
   },
 ];
 

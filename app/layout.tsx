@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+const publicBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export const metadata: Metadata = {
   title: "Maison de Sable | Luxury Hair, Beauty & Grooming Experience in UAE",
   description:
@@ -34,6 +36,30 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link
+          rel="preload"
+          as="image"
+          href={`${publicBasePath}/hero-main.png`}
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${publicBasePath}/hero-dark.png`}
+          media="(prefers-color-scheme: dark)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${publicBasePath}/about-main.png`}
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href={`${publicBasePath}/about-dark.png`}
+          media="(prefers-color-scheme: dark)"
+        />
       </head>
       <body>{children}</body>
     </html>
