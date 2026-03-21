@@ -37,7 +37,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
       <div className="relative mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-0 pt-20 sm:pt-24 lg:pt-24">
         <div className="grid min-h-screen w-full gap-8 px-5 pb-8 sm:px-8 sm:pb-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0">
-          <div className="relative z-10 max-w-[28rem] self-end pb-2 lg:pl-8 lg:pb-20">
+          <div className="relative z-10 max-w-[28rem] self-center pt-6 lg:-translate-y-10 lg:pl-8 lg:pt-0">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,14 +50,14 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.08 }}
-              className="mt-5 text-[clamp(2.9rem,12vw,6.8rem)] leading-[0.92]"
+              className="mt-4 overflow-visible pb-[0.12em] text-[clamp(2.9rem,12vw,6.8rem)] leading-[0.98]"
               style={{ color: "var(--hero-wordmark)" }}
             >
               <motion.span
                 initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0.35, x: -10 }}
                 animate={{ clipPath: "inset(0 0% 0 0)", opacity: 1, x: 0 }}
                 transition={{ duration: 1.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-                className="relative block"
+                className="relative block overflow-visible"
               >
                 <motion.span
                   initial={{ x: "-18%", opacity: 0 }}
@@ -65,7 +65,7 @@ export function Hero() {
                   transition={{ duration: 1.7, delay: 0.32, ease: [0.33, 1, 0.68, 1] }}
                   className="absolute inset-y-[14%] left-0 w-[18%] bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.55)_50%,transparent_100%)] blur-[5px]"
                 />
-                <span className="font-script block pl-1 text-[1.04em] tracking-[-0.045em] [font-variant-ligatures:common-ligatures_contextual]">
+                <span className="font-script block overflow-visible pl-1 text-[1.04em] tracking-[-0.045em] [font-variant-ligatures:common-ligatures_contextual]">
                   Beauty
                 </span>
               </motion.span>
@@ -85,7 +85,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="mt-5 max-w-[22rem] text-sm leading-6 text-[var(--color-muted)] sm:text-base sm:leading-7"
+              className="mt-4 max-w-[22rem] text-sm leading-6 text-[var(--color-muted)] sm:text-base sm:leading-7"
             >
               Refined appointments for clients who want modern beauty with calm service, clean technique, and a premium finish.
             </motion.p>
@@ -93,7 +93,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-6 flex flex-col gap-3 sm:flex-row"
+              className="mt-5 flex flex-col gap-3 sm:flex-row"
             >
               <Link href="/appointment" className="button-primary">
                 Book Now

@@ -16,7 +16,6 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { getPublicBasePath } from "@/lib/public-base-path";
 
 const navItems = [
   { label: "Home", hash: "#home", icon: Home },
@@ -31,7 +30,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
-  const [publicBasePath, setPublicBasePath] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -45,7 +43,6 @@ export function Navbar() {
     const nextTheme = savedTheme === "dark" ? "dark" : "light";
     document.documentElement.dataset.theme = nextTheme;
     setTheme(nextTheme);
-    setPublicBasePath(getPublicBasePath());
   }, []);
 
   const toggleTheme = () => {
@@ -95,7 +92,6 @@ export function Navbar() {
 
         <nav className="hidden items-center gap-0 lg:flex">
           {navItems.map(({ label, hash, icon: Icon }) => {
-            const href = `${publicBasePath}/${hash}`;
             return (
             <motion.div
               key={hash}
@@ -105,7 +101,7 @@ export function Navbar() {
               className="relative"
             >
               <Link
-                href={href}
+                href={hash}
                 className={`group relative inline-flex items-center gap-1.5 px-1.5 py-2 text-[0.62rem] font-medium tracking-[0.1em] uppercase transition ${
                   scrolled
                     ? "text-[var(--color-muted)] hover:text-[var(--color-ivory)]"
@@ -148,7 +144,7 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <motion.div whileHover={{ y: -1.5 }} transition={{ duration: 0.25 }}>
             <Link
-              href={`${publicBasePath}/appointment`}
+              href="/appointment"
               className={`group inline-flex min-h-[2.4rem] items-center gap-2 rounded-full border px-4 text-[0.69rem] font-bold tracking-[0.02em] transition ${
                 scrolled
                   ? "border-[var(--color-border)] bg-[var(--color-glass)] text-[var(--color-ivory)] shadow-[0_8px_24px_rgba(0,0,0,0.06)]"
@@ -249,7 +245,6 @@ export function Navbar() {
           >
             <div className="mx-auto flex max-w-[1440px] flex-col px-5 py-6 sm:px-8">
               {navItems.map(({ label, hash, icon: Icon }, index) => {
-                const href = `${publicBasePath}/${hash}`;
                 return (
                 <motion.div
                   key={hash}
@@ -259,7 +254,7 @@ export function Navbar() {
                   transition={{ delay: index * 0.04, duration: 0.22 }}
                 >
                   <Link
-                    href={href}
+                    href={hash}
                     onClick={() => setOpen(false)}
                     className="flex items-center justify-between border-b border-[var(--color-border)] py-4 text-sm tracking-[0.18em] text-[var(--color-ivory)] uppercase"
                   >
@@ -275,7 +270,7 @@ export function Navbar() {
               <button type="button" onClick={toggleTheme} className="button-secondary mt-5 justify-center">
                 {theme === "light" ? "Dark Mode" : "Light Mode"}
               </button>
-              <Link href={`${publicBasePath}/appointment`} onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
+              <Link href="/appointment" onClick={() => setOpen(false)} className="button-primary mt-5 text-center">
                 Book Now
               </Link>
             </div>
