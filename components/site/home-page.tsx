@@ -77,8 +77,8 @@ export function HomePage() {
                       : `${publicBasePath}/about-main.png`
                   }
                   alt="Salon treatment moment"
-                  loading="lazy"
-                  fetchPriority="low"
+                  loading="eager"
+                  fetchPriority="high"
                   decoding="async"
                   draggable={false}
                   className="absolute inset-0 h-full w-full object-cover"
@@ -131,6 +131,7 @@ export function HomePage() {
                       src={item.image}
                       alt={item.title}
                       fill
+                      loading="eager"
                       className="object-cover transition duration-700 group-hover:scale-[1.03]"
                     />
                     <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
@@ -176,6 +177,7 @@ export function HomePage() {
                       src={member.image}
                       alt={member.name}
                       fill
+                      loading="eager"
                       className="object-contain object-bottom p-2 transition duration-700 group-hover:scale-[1.02]"
                     />
                   </div>
@@ -219,6 +221,7 @@ export function HomePage() {
                   src={offer.image}
                   alt={offer.title}
                   fill
+                  loading="eager"
                   className="object-cover transition duration-700 group-hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,9,9,0.08)_0%,rgba(9,9,9,0.2)_30%,rgba(9,9,9,0.86)_100%)]" />

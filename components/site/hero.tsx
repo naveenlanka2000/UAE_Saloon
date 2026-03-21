@@ -31,13 +31,13 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen overflow-hidden border-b border-[var(--color-border)]"
+      className="relative min-h-[100svh] overflow-hidden border-b border-[var(--color-border)]"
       style={{ background: "var(--hero-section-background)" }}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
-      <div className="relative mx-auto flex min-h-screen w-full max-w-[1440px] items-center px-0 pt-20 sm:pt-24 lg:pt-24">
-        <div className="grid min-h-screen w-full gap-8 px-5 pb-8 sm:px-8 sm:pb-10 lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0">
-          <div className="relative z-10 max-w-[28rem] self-center pt-6 lg:-translate-y-10 lg:pl-8 lg:pt-0">
+      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] items-center px-0 pt-18 sm:pt-24 lg:pt-24">
+        <div className="grid w-full gap-6 px-5 pb-8 sm:px-8 sm:pb-10 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0">
+          <div className="relative z-10 max-w-[28rem] self-center pt-4 lg:-translate-y-10 lg:pl-8 lg:pt-0">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -93,12 +93,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-5 flex flex-col gap-3 sm:flex-row"
+              className="mt-5 flex flex-row gap-3"
             >
-              <Link href="/appointment" className="button-primary">
+              <Link href="/appointment" className="button-primary flex-1 sm:flex-none">
                 Book Now
               </Link>
-              <Link href="/#services" className="button-secondary">
+              <Link href="/#services" className="button-secondary flex-1 sm:flex-none">
                 Explore
               </Link>
             </motion.div>
@@ -108,7 +108,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 26 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="relative min-h-[42vh] overflow-hidden sm:min-h-[52vh] lg:min-h-screen"
+            className="relative min-h-[36svh] overflow-hidden sm:min-h-[46vh] lg:min-h-screen"
           >
             <img
               src={
@@ -121,7 +121,7 @@ export function Hero() {
               fetchPriority="high"
               decoding="async"
               draggable={false}
-              className="absolute inset-0 h-full w-full object-cover object-center"
+              className="absolute inset-0 h-full w-full object-cover object-center-top sm:object-center lg:object-center"
             />
             <div
               className="absolute inset-0"
