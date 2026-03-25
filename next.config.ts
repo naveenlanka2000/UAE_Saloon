@@ -5,7 +5,6 @@ const basePath = process.env.BASE_PATH ?? "";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  distDir: ".next-app",
   basePath,
   assetPrefix: basePath || undefined,
   images: {

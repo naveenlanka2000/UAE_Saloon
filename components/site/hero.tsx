@@ -97,12 +97,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-3 flex flex-col gap-2 sm:flex-row"
+              className="mt-4 flex flex-wrap gap-2.5"
             >
-              <Link href="/appointment" className="button-apple-primary w-full min-w-0 px-3 text-[0.72rem] sm:flex-1 sm:px-4 sm:text-[0.76rem] lg:flex-none">
+              <Link href="/appointment" className="button-apple-primary px-4 text-[0.72rem] sm:px-[1.1rem] sm:text-[0.76rem]">
                 Book Now
               </Link>
-              <Link href="/#services" className="button-apple-secondary w-full min-w-0 px-3 text-[0.72rem] sm:flex-1 sm:px-4 sm:text-[0.76rem] lg:flex-none">
+              <Link href="/#services" className="button-apple-secondary px-4 text-[0.72rem] sm:px-[1.1rem] sm:text-[0.76rem]">
                 Explore
               </Link>
             </motion.div>
