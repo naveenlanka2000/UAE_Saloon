@@ -14,13 +14,13 @@ export function SectionHeading({
   const alignment = align === "center" ? "items-center text-center" : "items-start";
 
   return (
-    <div className={`flex max-w-3xl flex-col gap-5 ${alignment}`}>
+    <div className={`flex max-w-3xl flex-col gap-4 sm:gap-5 ${alignment}`}>
       <span className="section-eyebrow">{eyebrow}</span>
-      <h2 className="font-heading text-4xl leading-none text-[var(--color-ivory)] sm:text-5xl lg:text-6xl">
+      <h2 className="font-heading text-[clamp(2.1rem,9vw,4.75rem)] leading-[0.96] text-[var(--color-ivory)] lg:text-6xl">
         {title}
       </h2>
       {description ? (
-        <p className="max-w-2xl text-sm leading-7 text-[var(--color-muted)] sm:text-base">
+        <p className="max-w-[22rem] text-sm leading-6 text-[var(--color-muted)] sm:max-w-2xl sm:text-base sm:leading-7">
           {description}
         </p>
       ) : null}

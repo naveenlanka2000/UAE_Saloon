@@ -59,10 +59,10 @@ export function HomePage() {
         style={{ background: "var(--about-section-background)" }}
       >
         <Reveal>
-          <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-            <div className="relative z-10 mx-auto -mt-6 w-full max-w-[280px] sm:-mt-16 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
+          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div className="relative z-10 mx-auto mt-0 w-full max-w-[260px] sm:-mt-10 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
               <div
-                className="relative min-h-[250px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
+                className="relative min-h-[280px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
@@ -85,12 +85,12 @@ export function HomePage() {
                 />
               </div>
             </div>
-            <div className="max-w-[20rem] self-center pb-6 text-center lg:max-w-[28rem] lg:justify-self-end lg:pb-10 lg:text-left">
-              <span className="section-eyebrow">About the salon</span>
-              <p className="mt-4 max-w-[14ch] font-heading text-[clamp(1.55rem,7vw,3.3rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-ivory)]/92 lg:mt-5">
+            <div className="mx-auto max-w-[22rem] self-center pb-8 text-center lg:max-w-[28rem] lg:justify-self-end lg:pb-10 lg:text-left">
+              <span className="section-eyebrow justify-center lg:justify-start">About the salon</span>
+              <p className="mx-auto mt-4 max-w-[14ch] font-heading text-[clamp(1.9rem,9vw,3.3rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-ivory)]/92 lg:mx-0 lg:mt-5">
                 Quiet luxury. Clean technique.
               </p>
-              <p className="mt-4 max-w-[24ch] text-[0.92rem] leading-6 text-[var(--color-ivory)]/72 sm:text-lg sm:leading-8 lg:mt-5">
+              <p className="mx-auto mt-4 max-w-[26ch] text-[0.92rem] leading-6 text-[var(--color-ivory)]/72 sm:text-lg sm:leading-8 lg:mx-0 lg:mt-5">
                 Tailored beauty rituals designed for polished results and a calm premium experience.
               </p>
             </div>
@@ -119,15 +119,12 @@ export function HomePage() {
             description="The salon experience is built around elevated outcomes and a level of care that premium UAE clients expect."
           />
         </Reveal>
-        <div
-          style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
-          className="mt-8 px-2"
-        >
+        <div className="mt-8 -mx-5 px-2 sm:-mx-8 lg:-mx-12">
           <div className="grid gap-2 md:grid-cols-2">
             {differentiators.map((item, index) => {
               return (
                 <Reveal key={item.title} delay={index * 0.05}>
-                  <article className="group relative min-h-[320px] overflow-hidden border border-[var(--color-border)] sm:min-h-[360px]">
+                  <article className="group relative min-h-[280px] overflow-hidden border border-[var(--color-border)] sm:min-h-[360px]">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -136,14 +133,14 @@ export function HomePage() {
                       sizes="(max-width: 767px) 100vw, 50vw"
                       className="object-cover transition duration-700 group-hover:scale-[1.03]"
                     />
-                    <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
+                    <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:p-7">
                       <p className="text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase">
                         Signature standard
                       </p>
-                      <h3 className="mt-2 max-w-[14ch] font-heading text-3xl text-[#101214] sm:text-4xl">
+                      <h3 className="mt-2 max-w-[14ch] font-heading text-[1.9rem] leading-[0.96] text-[#101214] sm:text-4xl">
                         {item.title}
                       </h3>
-                      <p className="mt-3 max-w-[32ch] text-sm leading-7 text-[rgba(16,18,20,0.72)]">
+                      <p className="mt-3 max-w-[32ch] text-[0.84rem] leading-6 text-[rgba(16,18,20,0.72)] sm:text-sm sm:leading-7">
                         {item.description}
                       </p>
                     </div>
@@ -206,9 +203,15 @@ export function HomePage() {
                     </div>
                   </div>
                 </div>
-                <div className="px-3 pb-2 pt-4">
+                <div className="px-3 pb-4 pt-4 sm:pb-2">
                   <p className="text-[11px] tracking-[0.26em] text-[var(--color-champagne)] uppercase">
                     {member.role}
+                  </p>
+                  <h3 className="mt-2 font-heading text-2xl leading-none text-[var(--color-ivory)] sm:hidden">
+                    {member.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-[var(--color-muted)] sm:hidden">
+                    {member.specialty}
                   </p>
                 </div>
               </article>
@@ -225,14 +228,14 @@ export function HomePage() {
             description="Designed for weddings, seasonal refreshes, and clients who prefer premium maintenance with better value."
           />
         </Reveal>
-        <div className="mt-8 grid gap-4 xl:grid-cols-[1.18fr_0.82fr_0.82fr]">
+        <div className="mt-6 grid gap-4 xl:mt-8 xl:grid-cols-[1.18fr_0.82fr_0.82fr]">
           {offers.map((offer, index) => (
             <Reveal key={offer.title} delay={index * 0.08}>
               <motion.article
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
                 className={`group relative overflow-hidden border border-[var(--color-border)] ${
-                  index === 0 ? "min-h-[33rem]" : "min-h-[29rem]"
+                  index === 0 ? "min-h-[28rem] sm:min-h-[33rem]" : "min-h-[24rem] sm:min-h-[29rem]"
                 }`}
               >
                 <Image
@@ -245,12 +248,12 @@ export function HomePage() {
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,9,9,0.08)_0%,rgba(9,9,9,0.2)_30%,rgba(9,9,9,0.86)_100%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,186,140,0.18),transparent_32%)]" />
-                <div className="relative flex h-full flex-col justify-between p-6 sm:p-7 lg:p-8">
-                  <div className="flex items-start justify-between gap-4">
+                <div className="relative flex h-full flex-col justify-between p-5 sm:p-7 lg:p-8">
+                  <div className="flex flex-wrap items-start justify-between gap-3">
                     <span className="inline-flex items-center border border-white/15 bg-black/20 px-3 py-2 text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase backdrop-blur-md">
                       {offer.tag}
                     </span>
-                    <span className="inline-flex items-center gap-2 text-[11px] tracking-[0.22em] text-[var(--color-on-image-muted)] uppercase">
+                    <span className="inline-flex max-w-full items-center gap-2 text-[10px] tracking-[0.18em] text-[var(--color-on-image-muted)] uppercase sm:text-[11px] sm:tracking-[0.22em]">
                       <Sparkles size={13} className="text-[var(--color-champagne)]" />
                       Signature package
                     </span>
@@ -258,16 +261,16 @@ export function HomePage() {
 
                   <div>
                     <p className="text-sm text-[var(--color-on-image-muted)]">{offer.meta}</p>
-                    <h3 className={`mt-3 max-w-[11ch] font-heading leading-[0.94] text-[var(--color-on-image)] ${index === 0 ? "text-5xl sm:text-6xl" : "text-4xl sm:text-5xl"}`}>
+                    <h3 className={`mt-3 max-w-[11ch] font-heading leading-[0.94] text-[var(--color-on-image)] ${index === 0 ? "text-4xl sm:text-6xl" : "text-[2.35rem] sm:text-5xl"}`}>
                       {offer.title}
                     </h3>
-                    <p className="mt-4 max-w-[30ch] text-sm leading-7 text-[var(--color-on-image-muted)] sm:text-base">
+                    <p className="mt-4 max-w-[30ch] text-[0.92rem] leading-6 text-[var(--color-on-image-muted)] sm:text-base sm:leading-7">
                       {offer.copy}
                     </p>
                   </div>
 
                   <div className="border-t border-white/12 pt-5">
-                    <div className="flex items-center justify-between gap-4">
+                    <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <span className="text-sm text-[var(--color-on-image)]/88">{offer.detail}</span>
                       <Link
                         href="/appointment"
@@ -285,7 +288,7 @@ export function HomePage() {
       </section>
 
       <section className="section-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-10">
           <Reveal>
             <SectionHeading
               eyebrow="Testimonials"
@@ -320,11 +323,11 @@ export function HomePage() {
 
       <section id="booking" className="section-shell bg-[var(--color-charcoal)]">
         <Reveal>
-          <div className="relative overflow-hidden border border-[var(--color-border)] bg-[linear-gradient(180deg,color-mix(in_srgb,var(--color-panel)_90%,transparent)_0%,color-mix(in_srgb,var(--color-charcoal)_100%,transparent)_100%)] p-7 sm:p-9 lg:p-12">
+          <div className="relative overflow-hidden border border-[var(--color-border)] bg-[linear-gradient(180deg,color-mix(in_srgb,var(--color-panel)_90%,transparent)_0%,color-mix(in_srgb,var(--color-charcoal)_100%,transparent)_100%)] p-5 sm:p-9 lg:p-12">
             <div className="absolute right-0 top-0 h-48 w-48 bg-[radial-gradient(circle,rgba(178,141,88,0.16)_0%,transparent_70%)]" />
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
               <div>
-                <span className="section-eyebrow">Appointment page</span>
+                <span className="section-eyebrow justify-center lg:justify-start">Appointment page</span>
                 <h2 className="mt-5 max-w-[9ch] font-heading text-[clamp(2.6rem,4.4vw,4.8rem)] leading-[0.96] tracking-[-0.04em]">
                   Book your visit on a dedicated page.
                 </h2>
@@ -335,10 +338,10 @@ export function HomePage() {
                   booking options, and direct WhatsApp contact.
                 </p>
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Link href="/appointment" className="button-primary">
+                  <Link href="/appointment" className="button-primary w-full sm:w-auto">
                     Open Appointment Page <ArrowRight size={16} />
                   </Link>
-                  <Link href="https://wa.me/97145550188" className="button-secondary">
+                  <Link href="https://wa.me/97145550188" className="button-secondary w-full sm:w-auto">
                     WhatsApp
                   </Link>
                 </div>

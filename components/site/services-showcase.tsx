@@ -59,27 +59,35 @@ function ServiceTrack({
         {items.map((item) => (
           <SwiperSlide
             key={`${compact ? "compact" : "large"}-${item.title}`}
-            className={compact ? "!w-[280px] sm:!w-[340px] lg:!w-[380px]" : "!w-[360px] sm:!w-[480px] lg:!w-[560px]"}
+            className={
+              compact
+                ? "!w-[78vw] max-w-[17rem] sm:!w-[340px] sm:max-w-none lg:!w-[380px]"
+                : "!w-[86vw] max-w-[22rem] sm:!w-[480px] sm:max-w-none lg:!w-[560px]"
+            }
           >
             <article className="relative overflow-hidden border border-white/10">
-              <div className={compact ? "relative h-[240px] sm:h-[260px] lg:h-[280px]" : "relative h-[360px] sm:h-[420px] lg:h-[460px]"}>
+              <div className={compact ? "relative h-[220px] sm:h-[260px] lg:h-[280px]" : "relative h-[300px] sm:h-[420px] lg:h-[460px]"}>
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   loading="eager"
-                  sizes={compact ? "(max-width: 639px) 280px, (max-width: 1023px) 340px, 380px" : "(max-width: 639px) 360px, (max-width: 1023px) 480px, 560px"}
+                  sizes={
+                    compact
+                      ? "(max-width: 639px) 78vw, (max-width: 1023px) 340px, 380px"
+                      : "(max-width: 639px) 86vw, (max-width: 1023px) 480px, 560px"
+                  }
                   className="object-cover"
                 />
                 <div className="absolute inset-0" style={{ background: "var(--services-card-overlay)" }} />
-                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
+                <div className="absolute inset-x-0 bottom-0 p-4 sm:p-6 lg:p-7">
                   <p className="text-[11px] tracking-[0.24em] text-[var(--color-champagne)] uppercase">
                     Signature service
                   </p>
-                  <h3 className={`mt-2 max-w-[12ch] font-heading text-[var(--color-on-image)] ${compact ? "text-3xl" : "text-4xl sm:text-5xl"}`}>
+                  <h3 className={`mt-2 max-w-[12ch] font-heading text-[var(--color-on-image)] ${compact ? "text-[1.8rem]" : "text-[2.35rem] sm:text-5xl"}`}>
                     {item.title}
                   </h3>
-                  <p className="mt-2 max-w-[26ch] text-sm leading-7 text-[var(--color-on-image-muted)]">
+                  <p className="mt-2 max-w-[26ch] text-[0.84rem] leading-6 text-[var(--color-on-image-muted)] sm:text-sm sm:leading-7">
                     {item.description}
                   </p>
                 </div>
@@ -136,10 +144,9 @@ export function ServicesShowcase({ primary, secondary }: ServicesShowcaseProps) 
 
   return (
     <div
-      style={{ width: "100vw", marginLeft: "calc(50% - 50vw)", marginRight: "calc(50% - 50vw)" }}
-      className="mt-14 overflow-hidden"
+      className="mt-10 -mx-5 overflow-hidden sm:mt-14 sm:-mx-8 lg:-mx-12"
     >
-      <div className="px-2">
+      <div className="px-3 sm:px-2">
         <ServiceTrack
           items={primary}
           onSwiper={(swiper) => {
@@ -148,7 +155,7 @@ export function ServicesShowcase({ primary, secondary }: ServicesShowcaseProps) 
           onSlideChange={() => {}}
         />
       </div>
-      <div className="mt-2 px-2">
+      <div className="mt-2 px-3 sm:px-2">
         <ServiceTrack
           items={secondary}
           reverse
@@ -163,8 +170,8 @@ export function ServicesShowcase({ primary, secondary }: ServicesShowcaseProps) 
             setSecondaryIndex((secondary.length - 1 - swiper.realIndex + secondary.length) % secondary.length)
           }
         />
-        <div className="relative z-10 mt-[-1.9rem] h-12">
-          <div className="absolute right-1 top-[12px]">
+        <div className="relative z-10 mt-[-1.7rem] h-12 sm:mt-[-1.9rem]">
+          <div className="absolute right-3 top-[12px] sm:right-1">
             <button
               type="button"
               onClick={togglePlayback}

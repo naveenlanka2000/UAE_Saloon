@@ -129,6 +129,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background: var(--page-background);
   color: var(--color-ivory);
   font-family: var(--font-body);
@@ -173,9 +174,9 @@ button {
 .section-eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.32em;
+  gap: 0.55rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--color-champagne);
 }
@@ -183,7 +184,7 @@ button {
 .section-eyebrow::before {
   content: "";
   display: inline-block;
-  width: 3rem;
+  width: 2rem;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--color-champagne));
 }
@@ -391,12 +392,12 @@ button {
 
 .card-body {
   display: flex;
-  min-height: 14.5rem;
+  min-height: 13rem;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1.4rem;
-  padding: 2rem;
+  gap: 1rem;
+  padding: 1.25rem;
 }
 
 .card-copy {
@@ -454,6 +455,22 @@ button {
   .section-shell {
     padding-inline: 2rem;
     padding-block: 3.5rem;
+  }
+
+  .section-eyebrow {
+    gap: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+  }
+
+  .section-eyebrow::before {
+    width: 3rem;
+  }
+
+  .card-body {
+    min-height: 14.5rem;
+    gap: 1.4rem;
+    padding: 2rem;
   }
 }
 

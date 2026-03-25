@@ -36,22 +36,22 @@ export function Hero() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] items-center px-0 pt-16 sm:pt-18 lg:pt-18">
-        <div className="grid min-h-[100svh] w-full grid-cols-[1fr_0.82fr] gap-3 px-4 pb-4 sm:gap-6 sm:px-8 sm:pb-8 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0">
-          <div className="relative z-10 max-w-none self-start pt-2 lg:max-w-[25rem] lg:self-center lg:-translate-y-18 lg:pl-8 lg:pt-0">
+        <div className="grid min-h-[100svh] w-full grid-cols-1 gap-6 px-5 pb-8 pt-6 sm:gap-8 sm:px-8 sm:pb-10 sm:pt-8 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0 lg:pt-0">
+          <div className="relative z-10 mx-auto flex w-full max-w-[22rem] flex-col items-center self-start pt-0 text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-[25rem] lg:items-start lg:self-center lg:-translate-y-18 lg:pl-8 lg:text-left">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-[9px] tracking-[0.26em] text-[var(--color-champagne)] uppercase sm:text-[11px] sm:tracking-[0.34em]"
+              className="text-[10px] tracking-[0.24em] text-[var(--color-champagne)] uppercase sm:text-[11px] sm:tracking-[0.34em]"
             >
               Dubai luxury salon
             </motion.span>
-            <div className="mt-2 max-w-[11rem] overflow-visible sm:mt-3 sm:max-w-[22rem]">
+            <div className="mt-3 w-full max-w-[17rem] overflow-visible sm:max-w-[24rem] lg:max-w-[22rem]">
               <motion.h1
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.08 }}
-              className="overflow-visible pb-[0.34em] text-[clamp(1.8rem,8.8vw,6.8rem)] leading-[1.02] sm:pb-[0.42em] sm:text-[clamp(2.35rem,10.5vw,6.8rem)] sm:leading-[1.08]"
+              className="overflow-visible pb-[0.28em] text-[clamp(2.6rem,18vw,6.8rem)] leading-[0.94] sm:pb-[0.4em] sm:text-[clamp(3.4rem,11vw,6.8rem)] sm:leading-[1.02]"
                 style={{ color: "var(--hero-wordmark)" }}
               >
                 <motion.span
@@ -72,7 +72,7 @@ export function Hero() {
                     Beauty
                   </span>
                 </motion.span>
-                <span className="-mt-2 block font-heading text-[0.21em] tracking-[0.1em] text-[var(--color-ivory)] uppercase sm:-mt-4 sm:text-[0.23em] sm:tracking-[0.15em]">
+                <span className="-mt-1.5 block font-heading text-[0.21em] tracking-[0.12em] text-[var(--color-ivory)] uppercase sm:-mt-4 sm:text-[0.23em] sm:tracking-[0.15em]">
                   quietly elevated
                 </span>
               </motion.h1>
@@ -80,7 +80,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.14 }}
-                className="-mt-1.5 pl-0.5 text-[0.46rem] tracking-[0.14em] text-[var(--color-ivory)]/86 uppercase sm:-mt-4 sm:pl-1 sm:text-[0.66rem] sm:tracking-[0.3em]"
+                className="mx-auto -mt-1 max-w-[17rem] text-[0.58rem] tracking-[0.18em] text-[var(--color-ivory)]/86 uppercase sm:-mt-3 sm:max-w-none sm:text-[0.72rem] sm:tracking-[0.3em] lg:mx-0"
               >
                 Hair, bridal, skin, and nail rituals
               </motion.p>
@@ -88,7 +88,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="mt-2 max-w-[10rem] pl-0.5 text-[0.7rem] leading-4.5 text-[var(--color-muted)] sm:max-w-[21rem] sm:pl-1 sm:text-[0.96rem] sm:leading-6.5"
+                className="mx-auto mt-3 max-w-[15rem] text-[0.84rem] leading-6 text-[var(--color-muted)] sm:max-w-[22rem] sm:text-[0.96rem] sm:leading-6.5 lg:mx-0"
               >
                 Refined appointments for clients who want modern beauty with calm service, clean technique, and a premium finish.
               </motion.p>
@@ -97,12 +97,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-4 flex flex-wrap gap-2.5"
+              className="mt-5 flex w-full flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start"
             >
-              <Link href="/appointment" className="button-apple-primary px-4 text-[0.72rem] sm:px-[1.1rem] sm:text-[0.76rem]">
+              <Link href="/appointment" className="button-apple-primary w-full justify-center px-4 text-[0.72rem] sm:w-auto sm:px-[1.1rem] sm:text-[0.76rem]">
                 Book Now
               </Link>
-              <Link href="/#services" className="button-apple-secondary px-4 text-[0.72rem] sm:px-[1.1rem] sm:text-[0.76rem]">
+              <Link href="/#services" className="button-apple-secondary w-full justify-center px-4 text-[0.72rem] sm:w-auto sm:px-[1.1rem] sm:text-[0.76rem]">
                 Explore
               </Link>
             </motion.div>
@@ -112,7 +112,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 26 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="relative min-h-[52svh] overflow-hidden sm:min-h-[46vh] lg:min-h-screen"
+            className="relative mx-auto min-h-[44svh] w-full max-w-[28rem] overflow-hidden rounded-[1.5rem] sm:min-h-[52svh] sm:max-w-[36rem] lg:min-h-screen lg:max-w-none lg:rounded-none"
           >
             <img
               src={
@@ -125,7 +125,7 @@ export function Hero() {
               fetchPriority="high"
               decoding="async"
               draggable={false}
-              className="absolute inset-0 h-full w-full scale-[1.08] object-contain object-[62%_18%] [filter:drop-shadow(0_22px_34px_rgba(17,17,17,0.12))] sm:scale-100 sm:object-cover sm:object-center lg:object-center"
+              className="absolute inset-0 h-full w-full object-contain object-center [filter:drop-shadow(0_22px_34px_rgba(17,17,17,0.12))] sm:object-cover sm:object-center lg:object-center"
             />
             <div
               className="absolute inset-0"
