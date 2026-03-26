@@ -37,7 +37,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
       <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] items-center px-0 pt-16 sm:pt-18 lg:pt-18">
         <div className="grid min-h-[100svh] w-full grid-cols-1 gap-6 px-5 pb-8 pt-6 sm:gap-8 sm:px-8 sm:pb-10 sm:pt-8 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0 lg:pt-0">
-          <div className="relative z-10 mx-auto flex w-full max-w-[22rem] flex-col items-center self-start pt-0 text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-[25rem] lg:items-start lg:self-center lg:-translate-y-18 lg:pl-8 lg:text-left">
+          <div className="order-2 relative z-10 mx-auto flex w-full max-w-[22rem] flex-col items-center self-start pt-0 text-center sm:max-w-[28rem] lg:order-1 lg:mx-0 lg:max-w-[25rem] lg:items-start lg:self-center lg:-translate-y-18 lg:pl-8 lg:text-left">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -97,12 +97,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-5 flex w-full flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start"
+              className="mt-5 flex w-full max-w-[20rem] flex-nowrap gap-2.5 sm:max-w-none sm:justify-center lg:justify-start"
             >
-              <Link href="/appointment" className="button-apple-primary w-full justify-center px-4 text-[0.72rem] sm:w-auto sm:px-[1.1rem] sm:text-[0.76rem]">
+              <Link href="/appointment" className="button-apple-primary flex-1 justify-center px-4 text-[0.72rem] sm:flex-none sm:px-[1.1rem] sm:text-[0.76rem]">
                 Book Now
               </Link>
-              <Link href="/#services" className="button-apple-secondary w-full justify-center px-4 text-[0.72rem] sm:w-auto sm:px-[1.1rem] sm:text-[0.76rem]">
+              <Link href="/#services" className="button-apple-secondary flex-1 justify-center px-4 text-[0.72rem] sm:flex-none sm:px-[1.1rem] sm:text-[0.76rem]">
                 Explore
               </Link>
             </motion.div>
@@ -112,7 +112,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 26 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="relative mx-auto min-h-[44svh] w-full max-w-[28rem] overflow-hidden rounded-[1.5rem] sm:min-h-[52svh] sm:max-w-[36rem] lg:min-h-screen lg:max-w-none lg:rounded-none"
+            className="order-1 relative mx-auto min-h-[44svh] w-full max-w-[28rem] overflow-hidden rounded-[1.5rem] sm:min-h-[52svh] sm:max-w-[36rem] lg:order-2 lg:min-h-screen lg:max-w-none lg:rounded-none"
           >
             <img
               src={
