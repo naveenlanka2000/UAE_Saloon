@@ -31,13 +31,13 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[100svh] overflow-hidden border-b border-[var(--color-border)]"
+      className="relative overflow-hidden border-b border-[var(--color-border)] lg:min-h-[100svh]"
       style={{ background: "var(--hero-section-background)" }}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(178,141,88,0.08),transparent_26%)]" />
-      <div className="relative mx-auto flex min-h-[100svh] w-full max-w-[1440px] items-center px-0 pt-16 sm:pt-18 lg:pt-18">
-        <div className="grid min-h-[100svh] w-full grid-cols-1 gap-6 px-5 pb-8 pt-6 sm:gap-8 sm:px-8 sm:pb-10 sm:pt-8 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0 lg:pt-0">
-          <div className="order-2 relative z-10 mx-auto flex w-full max-w-[22rem] flex-col items-center self-start pt-0 text-center sm:max-w-[28rem] lg:order-1 lg:mx-0 lg:max-w-[25rem] lg:items-start lg:self-center lg:-translate-y-18 lg:pl-8 lg:text-left">
+      <div className="relative mx-auto w-full max-w-[1440px] px-0 pt-16 sm:pt-18 lg:flex lg:min-h-[100svh] lg:items-center lg:pt-18">
+        <div className="grid w-full grid-cols-1 gap-8 px-5 pb-10 pt-5 sm:gap-10 sm:px-8 sm:pb-12 sm:pt-8 lg:min-h-screen lg:grid-cols-[0.76fr_1.24fr] lg:items-stretch lg:gap-0 lg:px-0 lg:pb-0 lg:pt-0">
+          <div className="order-1 relative z-10 mx-auto flex w-full max-w-[24rem] flex-col items-center text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-[25rem] lg:items-start lg:self-center lg:-translate-y-18 lg:pl-8 lg:text-left">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -46,12 +46,12 @@ export function Hero() {
             >
               Dubai luxury salon
             </motion.span>
-            <div className="mt-3 w-full max-w-[17rem] overflow-visible sm:max-w-[24rem] lg:max-w-[22rem]">
+            <div className="mt-4 w-full max-w-full overflow-visible sm:max-w-[24rem] lg:max-w-[22rem]">
               <motion.h1
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.08 }}
-              className="overflow-visible pb-[0.28em] text-[clamp(2.6rem,18vw,6.8rem)] leading-[0.94] sm:pb-[0.4em] sm:text-[clamp(3.4rem,11vw,6.8rem)] sm:leading-[1.02]"
+                className="overflow-visible pb-[0.22em] text-[clamp(3rem,16vw,6.8rem)] leading-[0.92] sm:pb-[0.36em] sm:text-[clamp(3.4rem,11vw,6.8rem)] sm:leading-[1.02]"
                 style={{ color: "var(--hero-wordmark)" }}
               >
                 <motion.span
@@ -80,7 +80,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.14 }}
-                className="mx-auto -mt-1 max-w-[17rem] text-[0.58rem] tracking-[0.18em] text-[var(--color-ivory)]/86 uppercase sm:-mt-3 sm:max-w-none sm:text-[0.72rem] sm:tracking-[0.3em] lg:mx-0"
+                className="mx-auto mt-1 max-w-[19rem] text-[0.62rem] tracking-[0.2em] text-[var(--color-ivory)]/86 uppercase sm:-mt-3 sm:max-w-none sm:text-[0.72rem] sm:tracking-[0.3em] lg:mx-0"
               >
                 Hair, bridal, skin, and nail rituals
               </motion.p>
@@ -88,7 +88,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="mx-auto mt-3 max-w-[15rem] text-[0.84rem] leading-6 text-[var(--color-muted)] sm:max-w-[22rem] sm:text-[0.96rem] sm:leading-6.5 lg:mx-0"
+                className="mx-auto mt-4 max-w-[21rem] text-[0.92rem] leading-6 text-[var(--color-muted)] sm:max-w-[22rem] sm:text-[0.96rem] sm:leading-6.5 lg:mx-0"
               >
                 Refined appointments for clients who want modern beauty with calm service, clean technique, and a premium finish.
               </motion.p>
@@ -97,7 +97,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.28 }}
-              className="mt-5 flex w-full max-w-[20rem] flex-nowrap gap-2.5 sm:max-w-none sm:justify-center lg:justify-start"
+              className="mt-6 flex w-full max-w-[22rem] flex-nowrap gap-3 sm:max-w-none sm:justify-center lg:justify-start"
             >
               <Link href="/appointment" className="button-apple-primary flex-1 justify-center px-4 text-[0.72rem] sm:flex-none sm:px-[1.1rem] sm:text-[0.76rem]">
                 Book Now
@@ -112,7 +112,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 26 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="order-1 relative mx-auto min-h-[44svh] w-full max-w-[28rem] overflow-hidden rounded-[1.5rem] sm:min-h-[52svh] sm:max-w-[36rem] lg:order-2 lg:min-h-screen lg:max-w-none lg:rounded-none"
+            className="order-2 relative mx-auto aspect-[16/18] w-full max-w-[24rem] overflow-hidden rounded-[1.75rem] sm:aspect-[16/15] sm:max-w-[36rem] lg:order-2 lg:min-h-screen lg:max-w-none lg:rounded-none lg:aspect-auto"
           >
             <img
               src={
@@ -125,7 +125,7 @@ export function Hero() {
               fetchPriority="high"
               decoding="async"
               draggable={false}
-              className="absolute inset-0 h-full w-full object-contain object-center [filter:drop-shadow(0_22px_34px_rgba(17,17,17,0.12))] sm:object-cover sm:object-center lg:object-center"
+              className="absolute inset-0 h-full w-full object-cover object-[center_top] [filter:drop-shadow(0_22px_34px_rgba(17,17,17,0.12))] sm:object-cover sm:object-center lg:object-center"
             />
             <div
               className="absolute inset-0"

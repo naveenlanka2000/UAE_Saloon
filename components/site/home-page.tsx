@@ -55,14 +55,14 @@ export function HomePage() {
 
       <section
         id="about"
-        className="section-shell relative overflow-visible pt-8 pb-0 sm:pt-12 sm:pb-0 lg:pt-16 lg:pb-0"
+        className="section-shell relative overflow-visible pt-10 pb-0 sm:pt-12 sm:pb-0 lg:pt-16 lg:pb-0"
         style={{ background: "var(--about-section-background)" }}
       >
         <Reveal>
-          <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
-            <div className="relative z-10 mx-auto mt-0 w-full max-w-[260px] sm:-mt-10 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div className="relative z-10 mx-auto mt-0 w-full max-w-[300px] sm:-mt-10 sm:max-w-[360px] lg:-mt-30 lg:max-w-[400px]">
               <div
-                className="relative min-h-[280px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
+                className="relative min-h-[320px] overflow-hidden sm:min-h-[360px] lg:min-h-[420px]"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, rgba(0,0,0,0.68) 92%, rgba(0,0,0,0) 100%)",
@@ -85,12 +85,12 @@ export function HomePage() {
                 />
               </div>
             </div>
-            <div className="mx-auto max-w-[22rem] self-center pb-8 text-center lg:max-w-[28rem] lg:justify-self-end lg:pb-10 lg:text-left">
+            <div className="mx-auto max-w-[24rem] self-center pb-8 text-center lg:max-w-[28rem] lg:justify-self-end lg:pb-10 lg:text-left">
               <span className="section-eyebrow justify-center lg:justify-start">About the salon</span>
-              <p className="mx-auto mt-4 max-w-[14ch] font-heading text-[clamp(1.9rem,9vw,3.3rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-ivory)]/92 lg:mx-0 lg:mt-5">
+              <p className="mx-auto mt-4 max-w-[15ch] font-heading text-[clamp(2.1rem,8vw,3.3rem)] leading-[0.98] tracking-[-0.04em] text-[var(--color-ivory)]/92 lg:mx-0 lg:mt-5">
                 Quiet luxury. Clean technique.
               </p>
-              <p className="mx-auto mt-4 max-w-[26ch] text-[0.92rem] leading-6 text-[var(--color-ivory)]/72 sm:text-lg sm:leading-8 lg:mx-0 lg:mt-5">
+              <p className="mx-auto mt-4 max-w-[30ch] text-[0.96rem] leading-6 text-[var(--color-ivory)]/72 sm:text-lg sm:leading-8 lg:mx-0 lg:mt-5">
                 Tailored beauty rituals designed for polished results and a calm premium experience.
               </p>
             </div>
